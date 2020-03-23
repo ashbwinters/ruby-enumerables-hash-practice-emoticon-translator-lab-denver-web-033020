@@ -19,7 +19,7 @@ def get_japanese_emoticon(source, english_emoticon)
     if key == english_emoticon
       result = value
     else
-      result = "I'm sorry. I cannot translate this at this time."
+      result = 'I am so sorry. I cannot translate "#{english_emoticon}" at this time.'
     end
   end
   result
@@ -33,7 +33,7 @@ def get_english_meaning(source, japanese_emoticon)
     if key == japanese_emoticon
       result = pair
     else
-      result = "I'm sorry. I cannot translate this at this time."
+      result = 'I am sorry. I cannot translate "#{japanese_emoticon}" at this time.'
     end
   end
   result
