@@ -13,13 +13,11 @@ end
 
 def get_japanese_emoticon(source, english_emoticon)
   translator = load_library(source)
-  result = 0
+  result = "Sorry, that emoticon was not found"
   
   translator["get_emoticon"].each do |key, value|
     if key == english_emoticon
       result = value
-    else
-      result = "Sorry, that emoticon was not found"
     end
   end
   result
@@ -27,13 +25,11 @@ end
 
 def get_english_meaning(source, japanese_emoticon)
   translator = load_library(source)
-  result = 0
+  result = "Sorry, that emoticon was not found"
   
   translator["get_meaning"].each do |key, pair|
     if key == japanese_emoticon
       result = pair
-    else
-      result = "Sorry, that emoticon was not found"
     end
   end
   result
