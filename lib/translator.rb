@@ -18,6 +18,8 @@ def get_japanese_emoticon(source, english_emoticon)
   translator["get_emoticon"].each do |key, value|
     if key == english_emoticon
       result = value
+    else
+      result = "I'm sorry. I cannot translate this at this time."
     end
   end
   result
@@ -30,6 +32,8 @@ def get_english_meaning(source, japanese_emoticon)
   translator["get_meaning"].each do |key, pair|
     if key == japanese_emoticon
       result = pair
+    else
+      result = "I'm sorry. I cannot translate this at this time."
     end
   end
   result
